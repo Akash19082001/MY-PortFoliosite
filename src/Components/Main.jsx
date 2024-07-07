@@ -7,7 +7,7 @@ const Main = () => {
   return (
     <div id='main'>
       <img className='w-full h-screen object-cover object-bottom' src="src/assets/Home.JPG" alt='/' />
-      <div className='w-full h-screen absolute top-0 left-0 bg-black/50'>
+      <div className='w-full h-screen absolute top-0 left-0 bg-black/90'>
         <motion.div 
           className='max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center text-white'
           initial={{ opacity: 0 }}
