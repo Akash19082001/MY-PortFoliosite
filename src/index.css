@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    scroll-behavior: smooth;
+}
+
+/* In your CSS file or a <style> tag */
+
+/* In your CSS file or a <style> tag */
+
+@keyframes lighting {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.project-container {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-container:hover {
+  transform: scale(1.05);
+  animation: lighting 1.5s infinite alternate;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+/* In your CSS file or a <style> tag */
+
+@keyframes borderAnimation {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  
+  .border-animate {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      bottom: 0;
+      width: 2px;
+      height: 0; /* Start the height at 0 */
+      background-color: #D1D5DB; /* This is the stone-200 color */
+      animation: borderAnimation 10s ease-in-out forwards;
+    }
+  }
+
+
+  /* In your CSS file or a <style> tag */
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  .link-animate {
+    transition: background-color 0.9s, transform 2s;
+  }
+  
+  .link-animate:hover {
+    background-color: #2c2c2c;
+    transform: scale(1.1);
+  }
+  
+  
