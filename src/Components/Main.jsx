@@ -6,13 +6,14 @@ import { motion } from 'framer-motion';
 const Main = () => {
   return (
     <div id='main'>
-      <img className='w-full h-screen object-cover object-bottom' src="src/assets/Home.JPG" alt='/' />
+      <img className='hidden md:block w-full h-screen object-cover' src="src/assets/Home.webp" alt='background' />
+      <img className='block md:hidden w-full h-screen object-cover' src="src/assets/backround.webp" alt='background' />
       <div className='w-full h-screen absolute top-0 left-0 bg-black/90'>
         <motion.div 
           className='max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center text-white'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 2 }} 
         >
           <motion.h1 
             className='sm:text-5xl text-4xl lg:text-6xl font-bold shadow-gray-800'
@@ -52,11 +53,41 @@ const Main = () => {
             animate={{ scale: 1 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            <a href='https://x.com/i/flow/login?redirect_after_login=%2Fakfreeks5_akash'><FaTwitter className='cursor-pointer' size={20} /></a>
-            <a href='https://www.facebook.com/aksah.aksah.108889?mibextid=ZbWKwL'><FaFacebook className='cursor-pointer' size={20} /></a>
-            <a href='https://www.instagram.com/lofer_idol._/?igsh=MWMxNWw3MTE3OG1mbA%3D%3D'><FaInstagram className='cursor-pointer' size={20} /></a>
-            <a href='https://www.linkedin.com/in/akash19082001/'><FaLinkedinIn className='cursor-pointer' size={20} /></a>
-            <a href='https://github.com/Akash19082001'><FaGithub className='cursor-pointer' size={20} /></a>
+            <motion.a 
+              href='https://x.com/i/flow/login?redirect_after_login=%2Fakfreeks5_akash'
+              className='cursor-pointer'
+              whileHover={{ scale: 1.1 }}
+            >
+              <FaTwitter size={20} />
+            </motion.a>
+            <motion.a 
+              href='https://www.facebook.com/aksah.aksah.108889?mibextid=ZbWKwL'
+              className='cursor-pointer'
+              whileHover={{ scale: 1.1 }}
+            >
+              <FaFacebook size={20} />
+            </motion.a>
+            <motion.a 
+              href='https://www.instagram.com/lofer_idol._/?igsh=MWMxNWw3MTE3OG1mbA%3D%3D'
+              className='cursor-pointer'
+              whileHover={{ scale: 1.1 }}
+            >
+              <FaInstagram size={20} />
+            </motion.a>
+            <motion.a 
+              href='https://www.linkedin.com/in/akash19082001/'
+              className='cursor-pointer'
+              whileHover={{ scale: 1.1 }}
+            >
+              <FaLinkedinIn size={20} />
+            </motion.a>
+            <motion.a 
+              href='https://github.com/Akash19082001'
+              className='cursor-pointer'
+              whileHover={{ scale: 1.1 }}
+            >
+              <FaGithub size={20} />
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>

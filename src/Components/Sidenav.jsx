@@ -12,7 +12,7 @@ const Sidenav = () => {
 
   return (
     <div>
-      <AiOutlineMenu onClick={handleNav} className='absolute top-4 right-4 z-[99] md:hidden'/>
+      <AiOutlineMenu onClick={handleNav} className='absolute top-4 right-4 z-[99] md:hidden text-white'/>
       {
          nav ?(
            <div className='fixed w-full h-full  bg-white/90 flex flex-col justify-center items-center z-20'>
@@ -32,14 +32,14 @@ const Sidenav = () => {
                 <span className='pl-4'>Resume</span>
               </a>
               <a onClick={handleNav} 
-              href='#Projects' className='w-[80%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
+              href='#projects' className='w-[80%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
                 <GrProjects size={20}/>
                 <span className='pl-4'>Projects</span>
               </a>
               <a onClick={handleNav} 
               href='#contact' className='w-[80%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'>
                 <AiOutlineMail size={20}/>
-                <span className='pl-4'>Contect</span>
+                <span className='pl-4'>Contact</span>
               </a>
 
            </div>
