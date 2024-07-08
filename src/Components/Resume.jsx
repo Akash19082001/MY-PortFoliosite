@@ -1,5 +1,14 @@
 import React from 'react';
 import ResumeImg from '../assets/Akash.jpg';
+import exprees from '../assets/Express.png';
+import git from '../assets/git.png';
+import java from '../assets/java.webp';
+import js from '../assets/JS.png';
+import python from '../assets/python.webp';
+import react from '../assets/React.webp';
+import spring from '../assets/Spring.png';
+import wordpress from '../assets/wordpress.webp';
+
 
 export default function Resume() {
 
@@ -33,26 +42,26 @@ export default function Resume() {
                     </p>
                     <div className='hidden md:block'>
                         <div onClick={handleScroll} className='scroll-container pr-80 link-animate'>
-                            <img className='scroll-img pr-7' src='src/assets/java.webp' alt='Scroll Image 1' />
-                            <img className='scroll-img pr-6 pl-2' src='src/assets/wordpress.webp' alt='Scroll Image 2' />
-                            <img className='scroll-img size-12 ' src='src/assets/Express.png' alt='Scroll Image 4' />
-                            <img className='scroll-img pr-7 pl-4' src='src/assets/python.webp' alt='Scroll Image 6' />
-                            <img className='scroll-img pr-7 pl-4' src='src/assets/Spring.png' alt='Scroll Image 3' />
-                            <img className='scroll-img pr-7 pl-2' src='src/assets/React.webp' alt='Scroll Image 7' />
-                            <img className='scroll-img pr-7' src='src/assets/git.png' alt='Scroll Image 5' />
-                            <img className='scroll-img pr-7 pl-1' src='src/assets/JS.png' alt='Scroll Image 8' />
+                            <img className='scroll-img pr-7' src={java} alt='Scroll Image 1' />
+                            <img className='scroll-img pr-6 pl-2' src={wordpress} alt='Scroll Image 2' />
+                            <img className='scroll-img size-12 ' src={exprees} alt='Scroll Image 4' />
+                            <img className='scroll-img pr-7 pl-4' src={python} alt='Scroll Image 6' />
+                            <img className='scroll-img pr-7 pl-4' src={spring}alt='Scroll Image 3' />
+                            <img className='scroll-img pr-7 pl-2' src={react} alt='Scroll Image 7' />
+                            <img className='scroll-img pr-7' src={git} alt='Scroll Image 5' />
+                            <img className='scroll-img pr-7 pl-1' src={js} alt='Scroll Image 8' />
                         </div>
                     </div>
                     <div className='block md:hidden'>
                         <div onClick={handleScroll} className='scroll-container flex flex-wrap justify-center space-x-2'>
-                            <img className='scroll-img w-16 h-15' src='src/assets/java.webp' alt='Scroll Image 1' />
-                            <img className='scroll-img w-16 h-15' src='src/assets/wordpress.webp' alt='Scroll Image 2' />
-                            <img className='scroll-img size-12' src='src/assets/Express.png' alt='Scroll Image 4' />
-                            <img className='scroll-img w-16 h-15' src='src/assets/python.webp' alt='Scroll Image 6' />
-                            <img className='scroll-img w-14 h-13 pr-2' src='src/assets/Spring.png' alt='Scroll Image 3' />
-                            <img className='scroll-img w-16 h-15' src='src/assets/React.webp' alt='Scroll Image 7' />
-                            <img className='scroll-img w-16 h-15' src='src/assets/git.png' alt='Scroll Image 5' />
-                            <img className='scroll-img w-16 h-15' src='src/assets/JS.png' alt='Scroll Image 8' />
+                            <img className='scroll-img w-16 h-15' src={java} alt='Scroll Image 1' />
+                            <img className='scroll-img w-16 h-15' src={wordpress} alt='Scroll Image 2' />
+                            <img className='scroll-img size-12' src={exprees} alt='Scroll Image 4' />
+                            <img className='scroll-img w-16 h-15' src={python} alt='Scroll Image 6' />
+                            <img className='scroll-img w-14 h-13 pr-2' src={spring} alt='Scroll Image 3' />
+                            <img className='scroll-img w-16 h-15' src={react} alt='Scroll Image 7' />
+                            <img className='scroll-img w-16 h-15' src={git} alt='Scroll Image 8' />
+                            <img className='scroll-img w-16 h-15' src={js} alt='Scroll Image 8' />
                         </div>
                     </div>
                 </div>

@@ -2,13 +2,13 @@ import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { FaTwitter, FaFacebook, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import homeIMG from '../assets/Home.jpg';
 
 const Main = () => {
   return (
     <div id='main'>
-      <img className='hidden md:block w-full h-screen object-cover' src="src/assets/Home.webp" alt='background' />
-      <img className='block md:hidden w-full h-screen object-cover' src="src/assets/backround.webp" alt='background' />
-      <div className='w-full h-screen absolute top-0 left-0 bg-black/90'>
+      <img className='w-full h-screen object-cover' src={homeIMG} alt='background' />
+      <div className='w-full h-screen absolute top-0 left-0 bg-black/40'>
         <motion.div 
           className='max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-center items-center text-white'
           initial={{ opacity: 0 }}
