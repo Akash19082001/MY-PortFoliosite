@@ -64,7 +64,7 @@
       bottom: 0;
       width: 2px;
       height: 0; /* Start the height at 0 */
-      background-color: #D1D5DB; /* This is the stone-200 color */
+      background-color: rgb(150, 150, 150); /* This is the stone-200 color */
       animation: borderAnimation 10s ease-in-out forwards;
     }
   }
@@ -89,44 +89,27 @@
     
 }
 
-@keyframes scroll {
-    
-    10% {
-      transform: translateX(-10%);
-   }
-    40% {
-    transform: translateX(-50%);
-   }
-    60%{
-      transform: translateX(-20%);
+
+@layer utilities {
+  .animate-loop {
+    @apply animate-none;
+    animation-name: loop;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes loop {
+    0% {
+      transform: translateX(0);
     }
-    40%{
-      transform: translateX(10%);
-    }
-    20%{
-      transform: translateX(-5%);
-    }
-    10%{
-      transform: translateX(0%);
-    }
-    20%{
-      transform: translateX(-10%);
-    }
-    40%{
-      transform: translateX(-60%);
-    }
-    1oo%{
+    100% {
       transform: translateX(-50%);
     }
-    50% {
-      transform: translateX(40%);
   }
-   10% {
-    transform: translateX(-10%);
 }
-  }
 
+.tag {
+  @apply flex items-center text-black bg-gray-100 shadow-gray-400 rounded-lg px-4 py-3 mr-4 shadow-md;
+}
 
-  
-  
   

@@ -4,6 +4,7 @@ import { FaTwitter, FaFacebook, FaInstagram, FaLinkedinIn, FaGithub } from 'reac
 import { motion } from 'framer-motion';
 import homeIMG from '../assets/Home.jpg';
 
+
 const Main = () => {
   return (
     <div id='main'>
@@ -91,6 +92,8 @@ const Main = () => {
           </motion.div>
         </motion.div>
       </div>
+         
+       
     </div>
   );
 };

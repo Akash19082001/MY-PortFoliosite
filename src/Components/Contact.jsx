@@ -1,4 +1,5 @@
 
+
 export default function Contect(){
   const config={
     email:' akash19m08y2001@gmail.com ',

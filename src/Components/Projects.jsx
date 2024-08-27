@@ -17,10 +17,10 @@ const Projects = () => {
       </p>
       <div className="grid md:grid-cols-2 gap-8">
         <a
-          href="https://github.com/Akash19082001/book-store"
+          href="https://lofer-app-todo.vercel.app"
           className="project-container"
         >
-          <Projectdemo img={bookImg} title="Bookstore Management" />
+          <Projectdemo img={bookImg} title="LoferNote" />
         </a>
         <a
           href="https://github.com/Akash19082001/e-commerce-project"
