@@ -2,7 +2,7 @@ import React from "react";
 import Projectdemo from "./Projectdemo";
 import bookImg from "../assets/book.jpg";
 import shopImg from "../assets/Shopping.jpg";
-import chatImg from "../assets/Chat.webp";
+import chatImg from "../assets/Chat.jpg";
 import projectImg from "../assets/project.jpg";
 
 const Projects = () => {
