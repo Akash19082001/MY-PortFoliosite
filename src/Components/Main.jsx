@@ -1,13 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { FaTwitter, FaFacebook, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import homeIMG from '../assets/Home.jpg';
-
+import ScrollMouse from './ScrollMouse';
 
 const Main = () => {
+  const [showScrollMouse, setShowScrollMouse] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // If the user scrolls down more than 100px, hide the ScrollMouse animation
+      if (window.scrollY > 100) {
+        setShowScrollMouse(false);
+      } else {
+        setShowScrollMouse(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div id='main'>
+    <div id='main' className="relative">
       <img className='w-full h-screen object-cover' src={homeIMG} alt='background' />
       <div className='w-full h-screen absolute top-0 left-0 bg-black/40'>
         <motion.div 
@@ -38,6 +57,8 @@ const Main = () => {
                 'Designer!',
                 2000,
                 'Coder!',
+                2000,
+                 'Youtuber',
                 2000,
                 'Tech Enthusiast!',
                 2000
@@ -92,8 +113,18 @@ const Main = () => {
           </motion.div>
         </motion.div>
       </div>
-         
-       
+
+      {/* Render the ScrollMouse component only if showScrollMouse is true */}
+      <div className='md:hidden block'>
+      <div>
+        {showScrollMouse && <ScrollMouse />} 
+        </div>  
+      </div>
+      <div className='md:block hiden'>
+        <div>
+        {showScrollMouse && <ScrollMouse />} 
+        </div> 
+      </div>
     </div>
   );
 };

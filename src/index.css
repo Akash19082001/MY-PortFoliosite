@@ -92,7 +92,6 @@
 
 @layer utilities {
   .animate-loop {
-    @apply animate-none;
     animation-name: loop;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -112,4 +111,3 @@
   @apply flex items-center text-black bg-gray-100 shadow-gray-400 rounded-lg px-4 py-3 mr-4 shadow-md;
 }
 
-  
