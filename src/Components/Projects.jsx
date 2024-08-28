@@ -23,7 +23,7 @@ const Projects = () => {
           <Projectdemo img={bookImg} title="LoferNote" />
         </a>
         <a
-          href="https://github.com/Akash19082001/e-commerce-project"
+          href="https://lofer-e-commerce.vercel.app"
           className="project-container"
         >
           <Projectdemo img={shopImg} title="Ecommerce Project" />
