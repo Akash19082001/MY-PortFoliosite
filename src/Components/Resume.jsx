@@ -40,7 +40,7 @@ export default function Resume() {
                     </div>
                        <div className='block md:hidden'>
                      <div className="flex-col items-center justify-center text-slate-50">
-                        <div className=" w-[22rem] max-w-[200vw] flex flex-col gap-4 relative py-6 overflow-hidden">
+                        <div className=" w-[24rem] max-w-[200vw] flex flex-col gap-4 relative py-6 overflow-hidden">
                             <div className="loop-slider" style={{ "--duration": "20000ms", "--direction": "reverse" }}>
                             <div className="inner flex animate-loop" style={{ animationDirection: "var(--direction)", animationDuration: "var(--duration)" }}>
                             <div className="tag"># Express</div>
