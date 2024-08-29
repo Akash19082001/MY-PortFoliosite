@@ -58,7 +58,7 @@ const Main = () => {
                 2000,
                 'Coder!',
                 2000,
-                 'Youtuber',
+                 'Youtuber!',
                 2000,
                 'Tech Enthusiast!',
                 2000
