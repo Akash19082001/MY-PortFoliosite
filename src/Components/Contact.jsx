@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import axios from "axios";
+// import axios from "axios";
+import robot from '../assets/Robot.gif'
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -20,7 +21,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-10 bg-black/90 text-white">
+    <section id="contact" className="py-10 bg-black/90 text-white md:pl-10 font-serif">
       <motion.div
         className="section-head text-center mb-6"
         initial={{ opacity: 0 }}
@@ -34,11 +35,11 @@ export default function Contact() {
         </p>
       </motion.div>
 
-      <div className="container mx-auto px-4 pt-20 pb-20">
-        <div className="flex flex-wrap lg:flex-nowrap gap-6">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 pb-20 pt-10">
+        <div className="flex flex-wrap md:flex-nowrap gap-6">
           {/* Form Section */}
           <motion.div
-            className="w-full lg:w-1/2"
+            className="w-full md:w-1/2"
             initial={{ x: -100 }}
             animate={{ x: 0 }}
             transition={{ duration: 1 }}
@@ -46,12 +47,12 @@ export default function Contact() {
             <form
               id="contactForm"
               onSubmit={handleSubmit}
-              className="bg-gray-100 shadow-gray-400 p-6 rounded-lg shadow-lg"
+              className="bg-gray-100 shadow-gray-400 p-6 rounded-lg shadow-lg font-serif"
             >
               <fieldset>
                 <div className="mb-4">
                   <h2 className="text-2xl font-bold mt-8 pb-10 text-black/100">
-                    Any Enquiries? Message Me!
+                    Any Enquiries? Message Me Yooh!
                   </h2>
                   <label
                     htmlFor="contactName"
@@ -121,25 +122,26 @@ export default function Contact() {
                     rows="4"
                   ></textarea>
                 </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-black/90 text-white p-2 rounded hover:bg-black/80 transition duration-300"
-                >
-                  Send Message
-                </button>
+                <div className="flex justify-center ">
+                  <button
+                    type="submit"
+                    className="bg-black/90 text-white p-2 rounded hover:bg-black/80 transition duration-300"
+                  >
+                    Send Message
+                  </button>
+                </div>
               </fieldset>
             </form>
           </motion.div>
 
           {/* Contact Info Section */}
           <motion.div
-            className="w-full lg:w-1/2"
+            className="w-full md:w-1/2 md:pl-6 lg:pl-20 lg:pt-20 lg:pr-40 font-serif"
             initial={{ x: 100 }}
             animate={{ x: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="bg-gray-100 shadow-gray-400 p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-100 shadow-gray-400 p-6 rounded-lg shadow-lg font-serif">
               <h2 className="text-2xl font-bold mb-4 text-black/100">
                 Contact Information
               </h2>
@@ -156,6 +158,13 @@ export default function Contact() {
                 <strong>Address:</strong> 17-211, THIRUMALAI NAGER, CHUNKANKADAI, KANNIYAKUMARI, TAMIL NADU, INDIA
               </p>
             </div>
+              <div className="flex justify-center mt-4 pt-20">
+                <img
+                  src={robot}
+                  alt="Robot"
+                  className="w-40 h-50 object-contain"
+                />
+              </div>
           </motion.div>
         </div>
       </div>
