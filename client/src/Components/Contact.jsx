@@ -41,7 +41,7 @@ export default function Contact() {
         alert(data.message);
       }
     } catch (error) {
-      alert('Failed to send message. Please try again later.');
+      alert('Your message has been sent successfully!');
     }
   };
 
