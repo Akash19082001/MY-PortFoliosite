@@ -2,24 +2,34 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
+
+dotenv.config(); // Load environment variables from .env file
 
 const app = express();
 const port = process.env.PORT || 5000;
+
+// Log MongoDB URL for debugging
+console.log('MongoDB Connection String:', process.env.MONGO_URL);
 
 // Middleware
 app.use(bodyParser.json());
 
 // CORS Configuration
 app.use(cors({
-  origin: 'http://localhost:5173', // Allow requests from your frontend's origin
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the allowed HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Specify the allowed headers
+  origin: 'http://localhost:5173',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/contactDB', {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+}).then(() => {
+  console.log('Connected to MongoDB');
+}).catch((error) => {
+  console.error('Error connecting to MongoDB:', error.message);
 });
 
 const contactSchema = new mongoose.Schema({
