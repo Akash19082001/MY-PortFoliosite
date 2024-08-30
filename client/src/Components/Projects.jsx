@@ -4,10 +4,18 @@ import bookImg from "../assets/book.jpg";
 import shopImg from "../assets/Shopping.jpg";
 import chatImg from "../assets/Chat.jpg";
 import projectImg from "../assets/project.jpg";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div id="projects" className="max-w-[1040px] m-auto md:pl-20 p-4 py-16">
+    <motion.div
+      id="projects"
+      className="max-w-[1040px] m-auto md:pl-20 p-4 py-16"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
       <h1 className="text-4xl font-bold text-center text-black">Projects</h1>
       <p className="text-center py-8">
         Explore the full project to see detailed visuals, the development
@@ -41,7 +49,7 @@ const Projects = () => {
           <Projectdemo img={projectImg} title="Explore my projects" />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

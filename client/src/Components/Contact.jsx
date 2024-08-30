@@ -136,7 +136,7 @@ export default function Contact() {
 
           {/* Contact Info Section */}
           <motion.div
-            className="w-full md:w-1/2 md:pl-6 lg:pl-20 lg:pt-20 lg:pr-40 font-serif"
+            className="w-full md:w-1/2 md:pl-6 pt-10 lg:pl-20 lg:pt-20 lg:pr-40 font-sans"
             initial={{ x: 100 }}
             animate={{ x: 0 }}
             transition={{ duration: 1 }}
@@ -155,7 +155,7 @@ export default function Contact() {
                 <strong>Phone:</strong> +91 7339432259
               </p>
               <p className="text-lg text-black/100 mt-2">
-                <strong>Address:</strong> 17-211, THIRUMALAI NAGER, CHUNKANKADAI, KANNIYAKUMARI, TAMIL NADU, INDIA
+                <strong>Address:</strong> 17-211, Thirumalai nager, Chunkankadai, Kanniyakumari, Tamil Nadu, India
               </p>
             </div>
               <div className="flex justify-center mt-4 pt-20">
