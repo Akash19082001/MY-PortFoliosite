@@ -36,7 +36,7 @@ const Main = () => {
           transition={{ duration: 2 }} 
         >
           <motion.h1 
-            className='sm:text-5xl text-4xl lg:text-6xl font-bold shadow-gray-800'
+            className='sm:text-5xl text-4xl lg:text-6xl font-bold'
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
