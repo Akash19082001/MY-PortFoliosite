@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-// import axios from "axios";
-import robot from '../assets/Robot.gif'
+import robot from '../assets/Robot.gif';
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -12,12 +11,38 @@ export default function Contact() {
   });
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setForm((prevForm) => ({
+      ...prevForm,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        alert(data.message);
+        setForm({
+          contactName: "",
+          contactEmail: "",
+          contactSubject: "",
+          contactMessage: "",
+        });
+      } else {
+        alert(data.message);
+      }
+    } catch (error) {
+      alert('Failed to send message. Please try again later.');
+    }
   };
 
   return (
@@ -158,13 +183,13 @@ export default function Contact() {
                 <strong>Address:</strong> 17-211, Thirumalai nager, Chunkankadai, Kanniyakumari, Tamil Nadu, India
               </p>
             </div>
-              <div className="flex justify-center mt-4 pt-20">
-                <img
-                  src={robot}
-                  alt="Robot"
-                  className="w-40 h-50 object-contain"
-                />
-              </div>
+            <div className="flex justify-center mt-4 pt-20">
+              <img
+                src={robot}
+                alt="Robot"
+                className="w-40 h-50 object-contain"
+              />
+            </div>
           </motion.div>
         </div>
       </div>
