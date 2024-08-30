@@ -7,7 +7,7 @@ const dotenv = require('dotenv');
 dotenv.config(); // Load environment variables from .env file
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port =5000;
 
 // Log MongoDB URL for debugging
 console.log('MongoDB Connection String:', process.env.MONGO_URL);
