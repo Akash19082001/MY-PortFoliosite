@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 // CORS Configuration
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://iam-akash.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
