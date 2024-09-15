@@ -4,6 +4,12 @@ import Workdemo from './Workdemo';
 const data =[
     {
         year: 2024,
+        title: "Full Stack Developer",
+        duration: "*now",
+        details: "Now Working as a FullStack Developer Micro Systems.prodect based micro services and finance sites, bank sites, technology innovations. ",
+    },
+    {
+        year: 2024,
         title: "Java Full Stack Developer internShip completed",
         duration: "6 months",
         details: "Subsequently, I was hired as an intern at INMAKES Infotech, where I worked as a Java full-stack developer.I am a highly skilled software developer with expertise in both front-end and back-end technologies.",
